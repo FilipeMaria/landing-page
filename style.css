@@ -1,0 +1,130 @@
+h1 {
+    color: wheat;
+    /* Estou a usar "font:" para manter a formatação do texto no h1 em apenas uma linha de código */
+    font: 100px Georgia;
+    /* formatação da margem numa única linha para ficar mais limpo */
+    margin: 45px 0px 0px 0px;
+}
+h2 {
+    font: 38px Georgia;
+    font-weight: bold;
+    margin: 15px 0px 30px;
+}    
+body {
+    color: wheat;
+    background: url(images/newspapers_1920.jpg);
+    background-size: cover;
+    text-align: left;
+    margin: 0px 0px 0px 30px;
+    /* aqui seleciono a font "Noticia Text" da Google para todo o texto do body, com excepção do h1 e 2 */
+    font-family: 'Noticia Text', serif;
+}
+p { font-size: 32px;
+    font-weight: bold;
+}
+.texto_botao {text-align: center;
+    margin: 60px;
+}
+span {color: limegreen;
+}
+ul {list-style:none;
+    margin-top: 115px;
+    text-align: center;
+}
+li {display: inline;
+}
+ul li a {color: wheat;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+.segundo_paragrafo {margin-top: 60px;
+}
+.botao {
+    text-decoration:none;
+    color: limegreen;
+    padding: 15px 15px;
+    background-color: #513cd6;
+}
+.read_my_work {margin-top: 90px;
+    text-align: left;
+}
+.botao:hover {opacity: 0.7;
+}
+ul li a:hover {
+    opacity: 0.7;
+}
+/* .botao_CNNPortugal:hover está por cima de .botao_CNNPortugal
+ de modo a não entrar em conflito de prioridade */
+.botao_CNNPortugal:hover{opacity: 0.7;
+}
+/* no botão CNN Portugal, acrescento display: inline-block para poder adicionar um ícone
+ligeiramente maior que o tamanho do texto. O ícone tem uma resolução de 64x64px */
+.botao_CNNPortugal{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-image: url(images/cnn_portugal_64px.png);
+    margin-left: 20px;
+    /* adicionei vertical alignment: middle para que o meio do ícone fique alinhado com o texto.
+    Por default, é o fundo do ícone a ficar alinhado com o texto */
+    vertical-align: middle;
+    /* a linha abaixo arredonda os cantos do ícone em 10 píxeis
+    em seguida, repito o processo para o ícone do ECO */
+    border-radius: 10px;
+}
+.botao_eco:hover{opacity: 0.7;
+}
+.botao_eco{
+    display: inline-block;
+    width: 148px;
+    height: 64px;
+    background-image: url(images/eco.png);
+    margin-left: 20px;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+@media (max-width: 640px){
+    h1 {
+        color: wheat;
+        font: 75px Georgia;
+        margin: 45px 0px 0px 0px;
+    }
+    body {
+        background: url(images/newspapers_1920.jpg) no-repeat;
+        background-size: cover;
+        text-align: left;
+        color: wheat;
+        margin: 0px 0px 0px 30px;
+        font-family: 'Noticia Text', serif;
+        }
+    .read_my_work {margin-top: 90px;
+            text-align: center;
+            font-size: 20px;
+        }    
+    }
+@media (max-width: 768px){
+    .read_my_work {margin-top: 40px;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+@media (max-width: 1536px){
+    ul {list-style:none;
+        margin-top: 225px;
+        text-align: center;
+    }
+}
+@media (min-width: 1920px) and (max-width: 1920px){
+    ul li a {color: black;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    ul {list-style:none;
+        margin-top: 185px;
+        text-align: center;
+    }  
+}
